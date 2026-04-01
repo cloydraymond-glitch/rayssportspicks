@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rays Sports Picks | Sports Handicapping Research & Premium Analytics</title>
+  <meta name="description" content="Rays Sports Picks delivers premium sports handicapping research, system analytics, record tracking, and subscription access for serious sports bettors seeking selective, data-driven event analysis." />
+  <meta name="keywords" content="sports handicapping, sports picks, betting analytics, premium picks, sports betting research, betting record, sports betting subscription, Rays Sports Picks" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Rays Sports Picks" />
+  <meta property="og:title" content="Rays Sports Picks | Premium Sports Handicapping Research" />
+  <meta property="og:description" content="High-intensity, data-driven sports handicapping research focused on the games worth your money and attention." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Rays+Sports+Picks" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rays Sports Picks" />
+  <meta name="twitter:description" content="Premium sports handicapping research, analytics, records, and subscriptions." />
+  <link rel="canonical" href="https://www.rayssportspicks.com/" />
+  <style>
+    :root {
+      --bg: #05070d;
+      --bg-soft: #0d1320;
+      --card: #0f1726;
+      --card-2: #131d30;
+      --text: #f4f7ff;
+      --muted: #aab6d3;
+      --accent: #3df2c1;
+      --accent-2: #6de7ff;
+      --line: rgba(255,255,255,0.08);
+      --danger: #ff5c7a;
+      --success: #59f0a5;
+      --warning: #ffd166;
+      --shadow: 0 20px 50px rgba(0,0,0,0.35);
+      --radius: 20px;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(61,242,193,0.12), transparent 24%),
+        radial-gradient(circle at top left, rgba(109,231,255,0.10), transparent 22%),
+        linear-gradient(180deg, #04060b 0%, #05070d 100%);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button, input, select, textarea { font: inherit; }
+
+    .container {
+      width: min(var(--max), calc(100% - 28px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(5,7,13,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 14px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #03110d;
+      font-size: 1.1rem;
+      font-weight: 900;
+      box-shadow: var(--shadow);
+      flex-shrink: 0;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .brand-text strong {
+      font-size: 1rem;
+      letter-spacing: 0.2px;
+    }
+
+    .brand-text span {
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links button {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.02);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-weight: 700;
+      cursor: pointer;
+      min-height: 42px;
+    }
+
+    .nav-links button.active,
+    .nav-links button:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.15);
+    }
+
+    .page {
+      display: none;
+      padding: 26px 0 60px;
+    }
+
+    .page.active { display: block; }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 18px;
+      align-items: stretch;
+      margin-top: 12px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(19,29,48,0.95), rgba(10,15,26,0.95));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .card-pad { padding: 24px; }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(61,242,193,0.1);
+      border: 1px solid rgba(61,242,193,0.18);
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 14px;
+    }
+
+    h1, h2, h3 { margin: 0 0 10px; }
+    h1 {
+      font-size: clamp(2.1rem, 6vw, 4.8rem);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+      text-transform: uppercase;
+      max-width: 10ch;
+    }
+
+    h2 {
+      font-size: clamp(1.5rem, 3.3vw, 2.4rem);
+      line-height: 1;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+    }
+
+    .subhead {
+      color: var(--muted);
+      font-size: 1rem;
+      max-width: 58ch;
+      margin-top: 14px;
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .point {
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--line);
+    }
+
+    .point strong {
+      display: block;
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+      color: var(--accent-2);
+      text-transform: uppercase;
+    }
+
+    .point span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .btn {
+      border: 0;
+      border-radius: 14px;
+      padding: 14px 16px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      min-height: 48px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #03110d;
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--line);
+      color: var(--text);
+    }
+
+    .stack { display: grid; gap: 16px; }
+
+    .headline-box {
+      display: grid;
+      gap: 14px;
+    }
+
+    .mini-stat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .mini-stat {
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--line);
+    }
+
+    .mini-stat .label {
+      color: var(--muted);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.9px;
+    }
+
+    .mini-stat .value {
+      font-size: 1.8rem;
+      font-weight: 900;
+      margin-top: 6px;
+    }
+
+    .green { color: var(--success); }
+    .red { color: var(--danger); }
+    .yellow { color: var(--warning); }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .list {
+      display: grid;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .list-item {
+      padding: 13px 14px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.03);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .event-box textarea,
+    .form input,
+    .form select {
+      width: 100%;
+      background: rgba(0,0,0,0.22);
+      color: var(--text);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+      outline: none;
+      min-height: 48px;
+    }
+
+    .event-box textarea {
+      min-height: 180px;
+      resize: vertical;
+      margin-top: 10px;
+    }
+
+    .saved-note,
+    .form-note {
+      min-height: 1.3em;
+      margin-top: 10px;
+      color: var(--accent);
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .records {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .record-box {
+      padding: 20px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--line);
+    }
+
+    .record-box .kicker {
+      color: var(--muted);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .record-box .big {
+      font-size: 2.2rem;
+      font-weight: 900;
+      margin: 8px 0 4px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 18px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 640px;
+      background: rgba(255,255,255,0.02);
+    }
+
+    th, td {
+      padding: 14px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--line);
+      font-size: 0.95rem;
+    }
+
+    th {
+      color: var(--accent-2);
+      background: rgba(255,255,255,0.04);
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.8px;
+    }
+
+    tr:last-child td { border-bottom: 0; }
+
+    .plans {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .plan {
+      padding: 22px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.03);
+      position: relative;
+    }
+
+    .plan.featured {
+      border-color: rgba(61,242,193,0.3);
+      box-shadow: 0 0 0 1px rgba(61,242,193,0.1) inset;
+    }
+
+    .plan-badge {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #03110d;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 0.76rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .price {
+      font-size: 2.5rem;
+      font-weight: 900;
+      line-height: 1;
+      margin: 10px 0;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .form {
+      display: grid;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .success-box {
+      display: none;
+      padding: 14px;
+      border-radius: 14px;
+      background: rgba(89,240,165,0.12);
+      border: 1px solid rgba(89,240,165,0.25);
+      color: var(--success);
+      font-weight: 800;
+      margin-top: 12px;
+    }
+
+    .success-box.show { display: block; }
+
+    .legal {
+      margin-top: 18px;
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .seo-copy {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 24px 0 40px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (max-width: 920px) {
+      .hero,
+      .section-grid,
+      .records,
+      .plans,
+      .split,
+      .hero-points {
+        grid-template-columns: 1fr;
+      }
+
+      h1 { max-width: none; }
+    }
+
+    @media (max-width: 640px) {
+      .nav {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .nav-links {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .nav-links button {
+        width: 100%;
+        padding: 12px 8px;
+        font-size: 0.86rem;
+      }
+
+      .card-pad,
+      .plan,
+      .record-box,
+      .legal {
+        padding: 18px;
+      }
+
+      .container {
+        width: min(var(--max), calc(100% - 20px));
+      }
+
+      .brand-text strong {
+        font-size: 0.94rem;
+      }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsOrganization",
+    "name": "Rays Sports Picks",
+    "url": "https://www.rayssportspicks.com/",
+    "description": "Premium sports handicapping research, analytics, records, and subscription access.",
+    "areaServed": "US",
+    "knowsAbout": ["sports handicapping", "sports betting research", "betting analytics"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Rays Sports Picks",
+    "url": "https://www.rayssportspicks.com/"
+  }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a href="#home" class="brand" aria-label="Rays Sports Picks home" onclick="showPage('home')">
+        <div class="brand-mark">R</div>
+        <div class="brand-text">
+          <strong>Rays Sports Picks</strong>
+          <span>Data. Discipline. Results.</span>
+        </div>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <button class="active" data-page="home" onclick="showPage('home')">Home</button>
+        <button data-page="record" onclick="showPage('record')">Record</button>
+        <button data-page="subscription" onclick="showPage('subscription')">Subscribe</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="home" class="page active" aria-labelledby="home-title">
+      <div class="hero">
+        <div class="card card-pad">
+          <div class="tag">Premium Sports Handicapping Research</div>
+          <h1 id="home-title">Sharp Data. Real Edge. No Filler.</h1>
+          <p class="subhead">Rays Sports Picks is built for bettors who want straight-to-the-point research, selective event focus, and high-intensity analytics without the extra fluff.</p>
+          <div class="cta-row">
+            <button class="btn btn-primary" onclick="showPage('subscription')">Get Access</button>
+            <button class="btn btn-secondary" onclick="showPage('record')">View Record</button>
+          </div>
+          <div class="hero-points">
+            <div class="point">
+              <strong>Selective</strong>
+              <span>No random volume. Only games worth real attention.</span>
+            </div>
+            <div class="point">
+              <strong>Data Driven</strong>
+              <span>System analytics, research angles, and matchup focus.</span>
+            </div>
+            <div class="point">
+              <strong>Money Focused</strong>
+              <span>Built for people who care about value, discipline, and execution.</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="card card-pad stack" aria-label="Featured stats and notes">
+          <div class="headline-box">
+            <h2>Today’s Angle</h2>
+          <b>MLB plays<br>
+Giving away this months plays <br>
+Houston Astros vs Boston Red Sox<br>
+Great pitching dual is expected, low runs as Crochet has a high strikeout rate with his true ace-level arm right now. He limits hard contacts. I feel Houston might pull this one off as an underdog.<br>UNDER 7 (+100)
+
+<p>
+
+
+Miami Marlins vs Chicago White Sox<br>
+Miami has a clear edge on starting pitching quality, better command and less free passes for the White Sox batters. Chicago has one of the weakest lineups in my opinion and has inconsistent power.<br>
+
+We are playing MIAMI MARLINS (-151)
+<p>
+NBA plays<br>
+Bucks vs Rockets - UNDER 218 (-116)
+
+<p>
+NHL plays<br>
+
+Colorado VS Vancouver <br>
+Colorado -459 <br>
+I hate playing this much money on a ML!!! 
+
+
+
+
+          </div>
+          <div class="event-box">
+            <label class="sr-only" for="eventText">Featured event text</label>
+            <textarea id="eventText" placeholder="ALL ACCESS FREE FOR APRIL"></textarea>
+            <button class="btn btn-primary" style="margin-top: 10px; width: 100%;" onclick="saveEventNote()">Save Event Text</button>
+            <div id="savedNote" class="saved-note"></div>
+          </div>
+          <div class="mini-stat-grid">
+            <div class="mini-stat">
+              <div class="label">Picks today</div>
+              <div class="value">2</div>
+            </div>
+            <div class="mini-stat">
+              <div class="label">Focus</div>
+              <div class="value">EV+</div>
+            </div>
+            <div class="mini-stat">
+              <div class="label">Style</div>
+              <div class="value">Sharp</div>
+            </div>
+            <div class="mini-stat">
+              <div class="label">Approach</div>
+              <div class="value green">Selective</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="section-grid">
+        <section class="card card-pad" aria-labelledby="why-us-title">
+          <h2 id="why-us-title">Why Rays Sports Picks</h2>
+          <div class="list">
+            <div class="list-item">No free picks. No empty hype. Just premium sports betting research.</div>
+            <div class="list-item">Built around quality over quantity for serious sports handicapping clients.</div>
+            <div class="list-item">Fast, direct language designed for mobile users who want the point now.</div>
+          </div>
+        </section>
+
+        <section class="card card-pad" aria-labelledby="disclaimer-title">
+          <h2 id="disclaimer-title">Important Disclaimer</h2>
+          <div class="list">
+            <div class="list-item">Entertainment purposes only.</div>
+            <div class="list-item">Not financial advice.</div>
+            <div class="list-item">All information sold or shared is opinion only from one person attempting to foresee the outcome of an event.</div>
+          </div>
+        </section>
+      </div>
+
+      <section class="card card-pad seo-copy" aria-labelledby="seo-home-copy">
+        <h2 id="seo-home-copy">Sports Handicapping Research That Cuts Through Noise</h2>
+        <p>Rays Sports Picks provides premium sports handicapping content, betting research, system analytics, and subscription-based access for users looking for sharper event breakdowns, cleaner card selection, and a more disciplined approach to sports betting analysis.</p>
+      </section>
+    </section>
+
+    <section id="record" class="page" aria-labelledby="record-title">
+      <div class="card card-pad">
+        <div class="tag">Verified Tracking Layout</div>
+        <h1 id="record-title" style="max-width:none; font-size: clamp(2rem, 5vw, 3.4rem);">Record. Units. Accountability.</h1>
+        <p class="subhead">Honest and full transparency.</p>
+
+        <div class="records">
+          <div class="record-box">
+            <div class="kicker">Overall Record</div>
+            <div class="big">48-31</div>
+            <div class="green">+17 Decisions</div>
+          </div>
+          <div class="record-box">
+            <div class="kicker">Net Units</div>
+            <div class="big">+21.4u</div>
+            <div class="green">Positive Return</div>
+          </div>
+          <div class="record-box">
+            <div class="kicker">Last 7 Days</div>
+            <div class="big">6-3</div>
+            <div class="yellow">Short-Term Run</div>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table aria-label="Recent betting record">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Event</th>
+                <th>play</th>
+                <th>Result</th>
+                <th>Units</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>04/01/2026</td>
+                <td>MLB: CHICAGO WHITE SOX VS. MIAMI MARLINS</td>
+                <td>Miami </td>
+                <td class="green">Pending</td>
+                <td>0.0</td>
+              </tr>
+              <tr>
+                <td>04/01/2026</td>
+                <td>BOSTON RED SOX VS. HOUSTON ASTROS</td>
+                <td>under 7 </td>
+                <td class="red">Pending</td>
+                <td>0.0</td>
+              </tr>
+              <tr>
+                <td>04/01/2026</td>
+                <td>MILWAUKEE BUCKS VS. HOUSTON ROCKETS</td>
+                <td>Under 218 </td>
+                <td class="green">Pending</td>
+                <td>0.0</td>
+              </tr>
+              <tr>
+                <td>04/01/2026</td>
+                <td>VANCOUVER CANUCKS VS. COLORADO AVALANCHE </td>
+                <td>Colorado</td>
+                <td class="green">Pending</td>
+                <td>0.0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="legal">
+          Past performance does not guarantee future results. All records, writeups, and tracked positions are shown for informational and entertainment purposes only.
+        </div>
+
+        <section class="seo-copy" aria-labelledby="seo-record-copy">
+          <h2 id="seo-record-copy">Sports Betting Record Page for Trust and Transparency</h2>
+          <p>Proven record monitored for years at Cappertex</p>
+        </section>
+      </div>
+    </section>
+
+    <section id="subscription" class="page" aria-labelledby="subscription-title">
+      <div class="card card-pad">
+        <div class="tag">Premium Membership Access</div>
+        <h1 id="subscription-title" style="max-width:none; font-size: clamp(2rem, 5vw, 3.4rem);">Pick Your Plan. Get The Edge.</h1>
+        <p class="subhead">.</p>
+
+        <div class="plans">
+          <article class="plan">
+            <h2 style="font-size:1.4rem;">Weekly</h2>
+            <div class="price">$39</div>
+            <div class="list">
+              <div class="list-item">7 days access</div>
+              <div class="list-item">All picks</div>
+             <div class="list-item">ALL sports</div>
+            </div>
+          </article>
+
+          <article class="plan featured">
+            <div class="plan-badge">Best Value</div>
+            <h2 style="font-size:1.4rem;">Monthly</h2>
+            <div class="price">$99</div>
+            <div class="list">
+              <div class="list-item">30 days access</div>
+              <div class="list-item">All picks</div>
+              <div class="list-item">All sports</div>
+            </div>
+          </article>
+
+         
+        </div>
+
+        <div class="split">
+          <section class="card card-pad" aria-labelledby="join-title">
+            <h2 id="join-title">Join Now</h2>
+            <form class="form" onsubmit="submitSubscription(event)">
+              <label class="sr-only" for="name">Full name</label>
+              <input id="name" type="text" placeholder="Full name" required />
+              <label class="sr-only" for="email">Email address</label>
+              <input id="email" type="email" placeholder="Email address" required />
+              <label class="sr-only" for="plan">Select a plan</label>
+              <select id="plan" required>
+                <option value="">Select a plan</option>
+                <option>Weekly</option>
+                <option>Monthly</option>
+                <option>VIP</option>
+              </select>
+              <button class="btn btn-primary" type="submit">Request Access</button>
+            </form>
+            <div id="successBox" class="success-box">Request saved. Connect this form to Stripe, PayPal, or your checkout system for live payments.</div>
+          </section>
+
+          <section class="card card-pad" aria-labelledby="subscribe-copy">
+            <h2 id="subscribe-copy">Proven Success</h2>
+            <div class="list">
+              <div class="list-item">Researched with a proven system</div>
+              <div class="list-item">Excellent money management stacks your bankroll</div>
+              <div class="list-item">Only Solid plays here</div>
+            </div>
+          </section>
+        </div>
+
+        <div class="legal">
+          Rays Sports Picks provides sports-related opinions, research, and system analytics only. We do not provide financial advice. Any information sold or displayed is solely opinion from one person attempting to foresee the future outcome of an event. This website is for entertainment purposes only.
+        </div>
+
+        <section class="seo-copy" aria-labelledby="seo-sub-copy">
+          <h2 id="seo-sub-copy">Premium Sports Picks Subscription Website</h2>
+          <p>
+
+
+<!-- Start of HTML Script -->
+<iframe src="https://www.cappertek.com/xMyResultsWidget.asp?shs=Winning4U.cappertek.com" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="width: 320px; height: 680px; margin: 0px; padding: 0px; border: 1px solid #dddddd; border-radius: 4px;"></iframe>
+<!-- End of HTML Script -->
+
+</p>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="year"></span> Rays Sports Picks · Entertainment only · Opinion-based sports handicapping research.</div>
+  </footer>
+
+  <script>
+    function showPage(pageId) {
+      document.querySelectorAll('.page').forEach(function(page) {
+        page.classList.toggle('active', page.id === pageId);
+      });
+
+      document.querySelectorAll('.nav-links button').forEach(function(button) {
+        button.classList.toggle('active', button.dataset.page === pageId);
+      });
+
+      history.replaceState(null, '', '#' + pageId);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function saveEventNote() {
+      var text = document.getElementById('eventText').value.trim();
+      localStorage.setItem('raysEventNote', text);
+      document.getElementById('savedNote').textContent = text ? 'Event text saved.' : 'Empty note saved.';
+    }
+
+    function loadEventNote() {
+      var saved = localStorage.getItem('raysEventNote') || '';
+      document.getElementById('eventText').value = saved;
+      if (saved) {
+        document.getElementById('savedNote').textContent = 'Saved event text loaded.';
+      }
+    }
+
+    function submitSubscription(event) {
+      event.preventDefault();
+      var name = document.getElementById('name').value.trim();
+      var email = document.getElementById('email').value.trim();
+      var plan = document.getElementById('plan').value;
+      var submissions = JSON.parse(localStorage.getItem('raysSubscriptions') || '[]');
+      submissions.push({ name: name, email: email, plan: plan, createdAt: new Date().toISOString() });
+      localStorage.setItem('raysSubscriptions', JSON.stringify(submissions));
+      document.getElementById('successBox').classList.add('show');
+      event.target.reset();
+    }
+
+    function initPageFromHash() {
+      var hash = window.location.hash.replace('#', '');
+      var validPages = ['home', 'record', 'subscription'];
+      showPage(validPages.indexOf(hash) >= 0 ? hash : 'home');
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+    loadEventNote();
+    initPageFromHash();
+    window.addEventListener('hashchange', initPageFromHash);
+  </script>
+</body>
+</html>
