@@ -82,6 +82,33 @@
     }
 
     .card {
+      background-size: cover;
+      background-position: center;
+      padding: 40px 20px;
+      border-radius: 10px;
+      border: 1px solid gold;
+      position: relative;
+      color: white;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.6);
+      border-radius: 10px;
+    }
+
+    .card h3,
+    .card p {
+      position: relative;
+      z-index: 2;
+    }
+
+    .card {
       background: #1a1a1a;
       padding: 20px;
       border-radius: 10px;
@@ -137,19 +164,19 @@
   </section>
 
   <section class="sports">
-    <div class="card">
+    <div class="card" style="background-image: url('https://images.unsplash.com/photo-1508341591423-4347099e1f19');">
       <h3>MLB</h3>
       <p>Advanced pitching metrics & trends</p>
     </div>
-    <div class="card">
+    <div class="card" style="background-image: url('https://images.unsplash.com/photo-1519861531473-9200262188bf');">
       <h3>NBA</h3>
       <p>Player efficiency & matchup analytics</p>
     </div>
-    <div class="card">
+    <div class="card" style="background-image: url('https://images.unsplash.com/photo-1518091043644-c1d4457512c6');">
       <h3>NFL</h3>
       <p>Situational stats & sharp money indicators</p>
     </div>
-    <div class="card">
+    <div class="card" style="background-image: url('https://images.unsplash.com/photo-1603297631958-2f4e5f48e4f0');">
       <h3>NHL</h3>
       <p>Goalie performance & advanced data models</p>
     </div>
@@ -169,3 +196,4 @@
 
 </body>
 </html>
+
