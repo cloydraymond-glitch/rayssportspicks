@@ -3,128 +3,169 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ray Sports Plays | Weekly Sports Picks for NBA, NFL, NHL & MLB</title>
-  <meta name="description" content="Ray Sports Plays sells weekly sports handicapping picks for NBA, NFL, NHL, and MLB with a clear record page, direct subscriptions, and mobile-first sports betting marketing." />
-  <meta name="keywords" content="sports picks, sports handicapping, weekly sports picks, NBA picks, NFL picks, NHL picks, MLB picks, sports betting picks" />
-  <meta name="robots" content="index, follow" />
-  <meta name="author" content="Ray Sports Plays" />
-  <meta property="og:title" content="Ray Sports Plays | Weekly Sports Picks" />
-  <meta property="og:description" content="Weekly NBA, NFL, NHL, and MLB picks with direct sports betting writeups and a transparent results page." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.rayssportsplays.com/" />
-  <link rel="canonical" href="https://www.rayssportsplays.com/" />
-  <link rel="stylesheet" href="styles.css" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SportsOrganization",
-    "name": "Ray Sports Plays",
-    "url": "https://www.rayssportsplays.com/",
-    "description": "Weekly sports handicapping picks and research for NBA, NFL, NHL, and MLB.",
-    "areaServed": "US"
-  }
-  </script>
+  <title>Rays Sports Plays</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0d0d0d;
+      color: #fff;
+    }
+
+    header {
+      background: linear-gradient(90deg, #000, #1a1a1a);
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid gold;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: gold;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #111;
+    }
+
+    nav a {
+      color: gold;
+      padding: 15px 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background: gold;
+      color: black;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: url('https://images.unsplash.com/photo-1517649763962-0c623066013b') center/cover no-repeat;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .cta-btn {
+      padding: 15px 25px;
+      background: gold;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .cta-btn:hover {
+      background: #ffd700;
+    }
+
+    .sports {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .card {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid gold;
+    }
+
+    .card h3 {
+      color: gold;
+    }
+
+    .pricing {
+      text-align: center;
+      padding: 40px;
+      background: #111;
+    }
+
+    .pricing h2 {
+      color: gold;
+    }
+
+    .price-box {
+      margin-top: 20px;
+      font-size: 2rem;
+      color: #00ff99;
+    }
+
+    footer {
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      background: #000;
+      color: #ccc;
+    }
+  </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="container nav">
-      <a class="brand" href="index.html" aria-label="Ray Sports Plays home">
-        <div class="brand-mark">R</div>
-        <div class="brand-text">
-          <strong>Ray Sports Plays</strong>
-          <span>Weekly picks. Clear record. Sharp angle.</span>
-        </div>
-      </a>
-      <nav class="nav-links" aria-label="Main navigation">
-        <a class="active" href="index.html">Home</a>
-        <a href="subscription.html">Weekly Subscription</a>
-        <a href="results.html">Results & Record</a>
-      </nav>
-    </div>
+
+  <header>
+    <h1>Rays Sports Plays</h1>
+    <p>Elite Analytics. Proven Results.</p>
   </header>
 
-  <main class="container">
-    <section class="hero">
-      <div class="card card-pad">
-        <div class="tag">Weekly Sports Handicapping Picks</div>
-        <h1>NBA. NFL. NHL. MLB. Weekly picks that WIN.</h1>
-        <p class="lead">The picks are built for bettors who want straight-to-the-point sports handicapping content, weekly subscription access, and a clean record page without filler or fake hype.</p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="subscription.html">Join Weekly for $50</a>
-          <a class="btn btn-secondary" href="results.html">See Results</a>
-        </div>
-        <div class="grid-3 section">
-          <div class="stat">
-            <div class="label">Sports Covered</div>
-            <div class="value">4</div>
-            <div class="muted">NBA, NFL, NHL, MLB</div>
-          </div>
-          <div class="stat">
-            <div class="label">Subscription ONLY</div>
-            <div class="value">$50</div>
-            <div class="muted">One simple weekly plan</div>
-          </div>
-          <div class="stat">
-            <div class="label">Style</div>
-            <div class="value">Sharp</div>
-            <div class="muted">Selective game focus</div>
-          </div>
-        </div>
-      </div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Subscribe</a>
+    <a href="#">Records</a>
+  </nav>
 
-      <aside class="card card-pad">
-        <h2>Yesterdays plays/h2>
-        <div class="list">
-          <div class="list-item">NBA picks are posted.</div>
-          <div class="list-item">MLB picks are posted.</div>
-          <div class="list-item">NHL picks are posted.</div>
-          <div class="list-item">NFL plays will continue this season</div>
-        </div>
-        <div class="legal" style="margin-top:16px;">
-          <strong>Entertainment Only</strong>
-          <p>This website is for entertainment purposes only. Ray Sports Plays is not a gambling service, sportsbook, financial advisor, or investment platform. All picks, records, writeups, and subscriptions reflect opinions only.</p>
-        </div>
-      </aside>
-    </section>
+  <section class="hero">
+    <h2>Turn Stats Into Profit 💰</h2>
+    <p>Data-driven picks for serious bettors. No guessing. Just analytics.</p>
+    <button class="cta-btn">Get Weekly Picks</button>
+  </section>
 
-    <section class="section grid-3">
-      <article class="feature">
-        <h2>Success proven</h2>
-        <p>Operated winning4u in the 90s and early 2000s, monitored by cappertex</p>
-      </article>
-      <article class="feature">
-        <h2>Money management</h2>
-        <p>Focused on ensuring clients are set up in the best situation on odds.</p>
-      </article>
-      <article class="feature">
-        <h2>Trust and proof</h2>
-        <p>A dedicated results page provides transparency. Also monitored under winning4u on CappersTex </p>
-      </article>
-    </section>
+  <section class="sports">
+    <div class="card">
+      <h3>MLB</h3>
+      <p>Advanced pitching metrics & trends</p>
+    </div>
+    <div class="card">
+      <h3>NBA</h3>
+      <p>Player efficiency & matchup analytics</p>
+    </div>
+    <div class="card">
+      <h3>NFL</h3>
+      <p>Situational stats & sharp money indicators</p>
+    </div>
+    <div class="card">
+      <h3>NHL</h3>
+      <p>Goalie performance & advanced data models</p>
+    </div>
+  </section>
 
-    <section class="split section">
-      <div class="card card-pad">
-        <h2>Why buyers subscribe</h2>
-        <div class="list">
-          <div class="list-item">One weekly price with no confusing tiers.</div>
-          <div class="list-item">Coverage across NBA, NFL, NHL, and MLB.</div>
-          <div class="list-item">Direct writeups built for serious sports betting customers.</div>
-          
-        </div>
-      </div>
-      <div class="card card-pad">
-        <h2>Winning</h2>
-        <p class="seo-copy">Ray Sports Plays offers weekly sports picks and sports handicapping research for users searching for NBA picks, NFL picks, NHL picks, MLB picks, premium betting selections, and results-driven sports betting content. </p>
-        <div class="cta-banner" style="margin-top:16px;">
-          <strong>Primary offer:</strong> Weekly subscription access for <strong>$50</strong> with NBA, NFL, NHL, and MLB plays.
-        </div>
-      </div>
-    </section>
-  </main>
+  <section class="pricing">
+    <h2>Simple Pricing</h2>
+    <p>Full access to all weekly plays</p>
+    <div class="price-box">$50 / Week</div>
+    <button class="cta-btn">Subscribe Now</button>
+  </section>
 
   <footer>
-    <div class="container">© <span id="year"></span> Ray Sports Plays · Entertainment only · Opinion-based sports handicapping content.</div>
+    <p>Rays Sports Plays © 2026</p>
+    <p>This website is for entertainment purposes only. We do not guarantee winnings. Please gamble responsibly.</p>
   </footer>
-  <script src="script.js"></script>
+
 </body>
 </html>
